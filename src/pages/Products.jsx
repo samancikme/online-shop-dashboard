@@ -11,7 +11,7 @@ import { deleteProduct, getAllProducts, updateProduct } from '../api/request'
 const Products = () => {
   const { state, dispatch } = useContext(MainContext)
   const products = state.products,
-    url = 'https://shop-database-ao4m.onrender.com/products'
+    url = 'https://shop-database-ao4m.onrender.com'
   const form = useRef()
   const imageVal = useRef()
 

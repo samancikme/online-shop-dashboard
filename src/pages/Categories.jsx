@@ -3,14 +3,14 @@ import { MainContext } from '../store/context'
 import CatCard from "../components/PageComponents/CatCard";
 import Loader from '../components/Loader';
 import ModalAlert from '../components/PageComponents/ModalAlert';
-import { deleteCategory, getAllCategories, updateCategory } from '../api/request';
+import { deleteCategory, getAllCategories, getAllProducts, updateCategory } from '../api/request';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Categories = () => {
 
   
-  const url = "https://shop-database-ao4m.onrender.com/categories"
+  const url = "https://shop-database-ao4m.onrender.com"
 
 
   const { state, dispatch } = useContext(MainContext)
@@ -24,11 +24,13 @@ const Categories = () => {
     await deleteCategory(id, url, dispatch)
     dispatch({ type: "TOGGLE_MODAL_ALERT" })
     await getAllCategories(url, dispatch)
+    await getAllProducts(url, dispatch)
   }
   const handleUpdate = async (id, inpVal) => {
     await updateCategory(id, url, dispatch, inpVal)
     dispatch({ type: "TOGGLE_MODAL_ALERT" })
     await getAllCategories(url, dispatch)
+    await getAllProducts(url, dispatch)
   }
 
 

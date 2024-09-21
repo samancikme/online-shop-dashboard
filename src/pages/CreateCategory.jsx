@@ -8,7 +8,7 @@ const CreateCategory = () => {
 
   const errorMessage = useRef()
   const form = useRef()
-  const url = "https://shop-database-ao4m.onrender.com/categories"
+  const url = "https://shop-database-ao4m.onrender.com"
   const { state, dispatch } = useContext(MainContext)
 
 

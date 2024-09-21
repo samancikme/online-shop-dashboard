@@ -7,7 +7,7 @@ import { createProduct, getAllProducts } from "../api/request";
 
 const CreateProduct = () => {
   const [image, setImage] = useState("https://cdn-icons-png.freepik.com/512/2530/2530593.png")
-  const url = 'https://online-shop-o62f.onrender.com/products'
+  const url = 'https://shop-database-ao4m.onrender.com'
   const form = useRef()
   const imageVal = useRef()
 
@@ -18,9 +18,8 @@ const CreateProduct = () => {
       description: form.current["description"].value,
       image: form.current["image"].value,
       price: form.current["price"].value,
-      categoryName: form.current["category-name"].value
+      categoryId: form.current["category-name"].value
     }
-    console.log(product)
     await createProduct(url ,product, dispatch)
     form.current.reset()
     await getAllProducts(url, dispatch)

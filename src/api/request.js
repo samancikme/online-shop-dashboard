@@ -4,7 +4,7 @@ import { toast } from "react-toastify"
 export const getAllCategories = async (url, dispatch) => {
   dispatch({ type: "FETCHING_CAT_DATA" })
   try {
-    const res = await axios.get(url)
+    const res = await axios.get(`${url}/categories`)
     dispatch({ type: "FETCHED_CAT_DATA", payload: res.data })
   } catch (err) {
     console.log(err)
@@ -15,7 +15,7 @@ export const getAllCategories = async (url, dispatch) => {
 export const getAllProducts = async (url, dispatch) => {
   dispatch({ type: "FETCHING_PRO_DATA" })
   try {
-    const res = await axios.get(url)
+    const res = await axios.get(`${url}/products`)
     dispatch({ type: "FETCHED_PRO_DATA", payload: res.data })
   } catch (err) {
     console.log(err)
@@ -26,7 +26,7 @@ export const getAllProducts = async (url, dispatch) => {
 export const deleteCategory = async (id, url, dispatch) => {
   dispatch({ type: "SET_CREATE_LOADING", payload: true })
   try {
-    const res = await axios.delete(`${url}/${id}`)
+    const res = await axios.delete(`${url}/categories/${id}`)
     toast.success("Delete succsessfully", {
       position: "bottom-right",
       autoClose: 5000,
@@ -58,7 +58,7 @@ export const deleteCategory = async (id, url, dispatch) => {
 export const updateCategory = async (id, url, dispatch , data) => {
   dispatch({ type: "SET_CREATE_LOADING", payload: true })
   try {
-    const res = await axios.patch(`${url}/${id}` , {title : data})
+    const res = await axios.patch(`${url}/categories/${id}` , {title : data})
     toast.success("Updated succsessfully", {
       position: "bottom-right",
       autoClose: 5000,
@@ -91,7 +91,7 @@ export const updateCategory = async (id, url, dispatch , data) => {
 export const deleteProduct = async (id, url, dispatch) => {
     dispatch({ type: "SET_CREATE_LOADING", payload: true })
     try {
-      const res = await axios.delete(`${url}/${id}`)
+      const res = await axios.delete(`${url}/products/${id}`)
       toast.success("Delete succsessfully", {
         position: "bottom-right",
         autoClose: 5000,
@@ -123,7 +123,7 @@ export const deleteProduct = async (id, url, dispatch) => {
   export const createCategory = async (url, dispatch , data) => {
     dispatch({ type: "SET_CREATE_LOADING", payload: true })
     try {
-      const res = await axios.post(url ,{title : data})
+      const res = await axios.post(`${url}/categories` ,{title : data})
       toast.success("Created succsessfully", {
         position: "bottom-right",
         autoClose: 5000,
@@ -155,7 +155,7 @@ export const deleteProduct = async (id, url, dispatch) => {
   export const createProduct = async (url, data, dispatch) => {
     dispatch({ type: "SET_CREATE_LOADING", payload: true })
     try {
-        const res = await axios.post(url, data)
+        const res = await axios.post(`${url}/products`, data)
         toast.success('Created succsessfully', {
             position: "bottom-right",
             autoClose: 5000,
@@ -185,7 +185,7 @@ export const deleteProduct = async (id, url, dispatch) => {
 
 export const updateProduct = async (url, id, data) => {
   try {
-      const res = await axios.patch(`${url}/${id}`, data)
+      const res = await axios.patch(`${url}/products/${id}`, data)
       toast.success('Updated succsessfully', {
           position: "bottom-right",
           autoClose: 5000,

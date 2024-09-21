@@ -9,7 +9,9 @@ export const initialState = {
   modalType: "",
   showModal: false,
   selectItemId : null,
-  isLoading: false
+  isLoading: false,
+  menuAct : false,
+  colorMode : false  //false === dark ; true === light
 };
 
 export const reducer = (state, action) => {
@@ -72,6 +74,16 @@ export const reducer = (state, action) => {
       return {
         ...state,
         isLoading: action.payload,
+      };
+    case "SET_MENU_ACT":
+      return {
+        ...state,
+        menuAct: !state.menuAct,
+      };
+    case "SET_COLOR_MODE":
+      return {
+        ...state,
+        colorMode: !state.colorMode,
       };
     default:
       return state;
