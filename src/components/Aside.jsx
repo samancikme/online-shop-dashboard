@@ -16,7 +16,7 @@ const Aside = () => {
 
 
   return (
-    <div className='shadow-lg border-[1px] h-full relative '>
+    <div className=' rounded-lg border-[1px] h-full relative '>
       <div className="p-3 flex flex-col justify-between h-full ">
         <div className="">
           <div className="sm:flex hidden overflow-hidden ">

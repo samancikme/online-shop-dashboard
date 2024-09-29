@@ -9,7 +9,7 @@ const Header = () => {
     const { pathname } = useLocation()
     const selectItem = btnData.find(item => item.path === pathname)
     return (
-        <div className='h-[65px] shadow-lg border-[1px] w-[100%] flex items-center'>
+        <div className='h-[65px] rounded-lg border-[1px] w-[100%] flex items-center'>
             <div className="flex justify-between items-center w-full px-5">
                 <div className="">
                     <button className="text-[24px] sm:hidden"

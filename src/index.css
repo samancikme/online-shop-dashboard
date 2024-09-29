@@ -59,3 +59,12 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.custom-toast {
+  font-size: 18px; /* Matnning hajmi */
+  padding: 20px;   /* Toast ichidagi bo'sh joy */
+  width: 300px;    /* Toastning kengligi */
+  border-radius: 10px;
+  bottom: 5px;
+  left: 5px;
+}

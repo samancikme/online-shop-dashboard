@@ -34,6 +34,7 @@ export const deleteCategory = async (id, url, dispatch) => {
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
+      className: "custom",
       progress: undefined,
       theme: "colored",
     })
@@ -47,6 +48,7 @@ export const deleteCategory = async (id, url, dispatch) => {
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
+      className: "custom",
       progress: undefined,
       theme: "colored",
     })
@@ -66,6 +68,7 @@ export const updateCategory = async (id, url, dispatch , data) => {
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
+      className: "custom",
       progress: undefined,
       theme: "colored",
     })
@@ -79,6 +82,7 @@ export const updateCategory = async (id, url, dispatch , data) => {
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
+      className: "custom",
       progress: undefined,
       theme: "colored",
     })
@@ -99,6 +103,7 @@ export const deleteProduct = async (id, url, dispatch) => {
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
+        className: "custom",
         progress: undefined,
         theme: "colored",
       })
@@ -112,6 +117,7 @@ export const deleteProduct = async (id, url, dispatch) => {
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
+        className: "custom",
         progress: undefined,
         theme: "colored",
       })
@@ -131,6 +137,7 @@ export const deleteProduct = async (id, url, dispatch) => {
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
+        className: "custom-toast",
         progress: undefined,
         theme: "colored",
       })
@@ -144,6 +151,7 @@ export const deleteProduct = async (id, url, dispatch) => {
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
+        className: "custom",
         progress: undefined,
         theme: "colored",
       })
@@ -163,6 +171,7 @@ export const deleteProduct = async (id, url, dispatch) => {
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
+            className: "custom",
             progress: undefined,
             theme: "colored",
         })
@@ -176,6 +185,7 @@ export const deleteProduct = async (id, url, dispatch) => {
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
+            className: "custom",
             progress: undefined,
             theme: "colored",
         })
@@ -193,6 +203,7 @@ export const updateProduct = async (url, id, data) => {
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
+          className: "custom",
           progress: undefined,
           theme: "colored",
       })
@@ -205,6 +216,7 @@ export const updateProduct = async (url, id, data) => {
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
+          className: "custom",
           progress: undefined,
           theme: "colored",
       })

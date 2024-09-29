@@ -1,6 +1,6 @@
 import React, { useContext, useRef } from 'react'
 import { MainContext } from '../store/context'
-import { createCategory } from '../api/request';
+import { createCategory, getAllCategories } from '../api/request';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -12,11 +12,12 @@ const CreateCategory = () => {
   const { state, dispatch } = useContext(MainContext)
 
 
-  const handleCreate = (e) => {
+  const handleCreate = async (e) => {
     e.preventDefault()
     const val = e.target['inpCreate'].value.trim()
     if (val.length >= 3) {
-      createCategory(url, dispatch, val)
+      await createCategory(url, dispatch, val)
+      await getAllCategories(url, dispatch)
       errorMessage.current.classList.add('hidden')
       form.current.reset()
     } else {
