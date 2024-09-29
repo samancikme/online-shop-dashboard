@@ -19,7 +19,7 @@ const Header = () => {
                 </div>
                 <div className=" flex flex-1 justify-start flex-row-reverse sm:flex-row  items-center gap-1">
                     <div className="w-[40px] h-[40px] rounded-md bg-blue-400 flex justify-center items-center">
-                        <div className="text-[24px] text-black" >{selectItem.icon()}</div>
+                        <div className="text-[24px] text-white" >{selectItem.icon()}</div>
                     </div>
                     <span className="text-[24px] text-black font-semibold border-b-2 border-blue-500">
                         {selectItem.title}
