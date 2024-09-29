@@ -13,7 +13,7 @@ const CatCard = ({ item, index }) => {
 
     return (
         <div>
-            <div className="flex justify-between items-center shadow-xl rounded-md bg-gray-200 px-2 py-2">
+            <div className="flex justify-between items-center  rounded-md bg-[#f2f2fe] px-2 py-2">
                 <div className="w-[30px] h-[30px] flex justify-center items-center bg-blue-100 shadow-2xl rounded-lg">
                     <span className="text-[18px] font-semibold">{index + 1}</span>
                 </div>
