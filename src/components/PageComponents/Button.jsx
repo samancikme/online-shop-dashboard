@@ -15,9 +15,9 @@ const Button = ({ item, Icon }) => {
                         dispatch({type: "SET_MENU_ACT" })
                     }
                 }}
-            className={` ${activeBtn ? "bg-blue-300 hover:bg-blue-300" : ""}  flex items-center justify-start hover:bg-blue-100 duration-150 gap-1 px-2 py-2 border-[1px] border-gray-100 rounded-md shadow-lg w-[100%]`}>
+            className={` ${activeBtn ? "bg-blue-400 hover:bg-blue-400 text-white" : ""}  flex items-center justify-start hover:bg-blue-100 duration-150 gap-3 px-2 py-2 rounded-md w-[100%]`}>
             <div>
-                <Icon className="text-[24px]" />
+                <Icon className={`${activeBtn? "text-white" : "text-gray-500" } text-[24px] `} />
             </div>
             <span className='text-[18px] font-semibold'>{item.title}</span>
         </button>
